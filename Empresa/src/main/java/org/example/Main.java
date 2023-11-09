@@ -127,7 +127,7 @@ public class Main {
                             System.out.println("Pulse 3 para cambiar el Cargo");
                             System.out.println("Pulse 4 para cambiar el Salario");
                             System.out.println("Pulse 5 para cambiar la Fecha de inicio");
-                            System.out.println(("Pulse 6 para si no quiere realizar cambios"));
+                            System.out.println(("Pulse 6 u otro número si no quiere realizar cambios"));
                             int seleccionar = scanner.nextInt();
 
                             switch (seleccionar) {
@@ -195,8 +195,9 @@ public class Main {
                         //Mostramos la lista de nuevo para que vean al empleado que desean eliminar.
                         System.out.println("Lista de empleados:");
                         List<Empleados> listEmpleadosEliminar = controladora.listarEmpleados();
+                        System.out.println("| ID | Nombre | Apellido | Cargo | Salario | Fecha de inicio |");
                         for (Empleados empleados : listEmpleadosEliminar) {
-                            System.out.println(empleados.toString());
+                            System.out.printf("| %d | %s | %s | %s | %.2f | %s |%n", empleados.getId(), empleados.getNombre(), empleados.getApellido(), empleados.getCargo(), empleados.getSalario(), empleados.getFechaDeInicio());
                         }
                         //Pedimos el ID del empleado que se quiere eliminar
                         System.out.println("Ingrese el ID del empleado que desea eliminar:");
@@ -216,11 +217,11 @@ public class Main {
                         System.out.println("Ingrese el cargo a buscar:");
                         String buscarCargo = scanner.next().toLowerCase();
                         List<Empleados> empleadosPorCargo = controladora.buscarEmpleadosPorCargo(buscarCargo);
-
                         if (!empleadosPorCargo.isEmpty()) {
                             System.out.println("Empleados con el cargo " + buscarCargo + ": ");
+                            System.out.println("| ID | Nombre | Apellido | Cargo | Salario | Fecha de inicio |");
                             for (Empleados empleado : empleadosPorCargo) {
-                                System.out.println(empleado.toString());
+                                System.out.printf("| %d | %s | %s | %s | %.2f | %s |%n", empleado.getId(), empleado.getNombre(), empleado.getApellido(), empleado.getCargo(), empleado.getSalario(), empleado.getFechaDeInicio());
                             }
                         } else {
                             System.out.println("No se encontraron empleados con el cargo " + buscarCargo);
