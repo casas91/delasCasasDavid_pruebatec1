@@ -26,6 +26,7 @@ public class Main {
 
         //Creamos un menu con opciones para que el usuario elija que quiere hacer:
         while(true){
+            try{
                 System.out.println("Selecciona una opcion: ");
                 System.out.println("Pulse 1 para agregar un nuevo empleado");
                 System.out.println("Pulse 2 para ver la lista de empleados");
@@ -234,6 +235,10 @@ public class Main {
                         System.exit(0);
                         break;
                 }
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Error: Ingrese un valor válido.");
+                scanner.next(); //Limpiamos el búfer del scanner
+            }
             }
         }
 

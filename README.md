@@ -5,7 +5,7 @@ Modificar a los empleados.
 Eliminar a los empleados.
 Buscar a los empleados por su cargo.
 
-Al ejecutar la aplicación, esta le dara un numero de opciones a realizar, en la que el usuario elegirá la que mas le convenga en ese momento.
+Al ejecutar la aplicación, esta le dara un numero de opciones a realizar, en la que el usuario elegirá la que mas le convenga en ese momento. Si eligiese un valor incorrecto como una letra, saltaría una excepción pidiendole que elija un valor válido. Así ocurrirá durante el transcurso de la aplicación.
 
 ***BIENVENIDO AL SISTEMA DE GESTIÓN DE EMPLEADOS***
 Selecciona una opcion: 
